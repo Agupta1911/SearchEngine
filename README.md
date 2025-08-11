@@ -8,7 +8,7 @@
 A **multi-threaded search engine** built from scratch with web crawling, indexing, and ranking capabilities. Handles 100K+ documents with sub-200ms response times.
 
 ## 🚀 Key Features
-- **Lightning-fast searches**: Average response time <200ms for 5,000+ documents
+- **Lightning-fast searches**: Average response time <200ms for 10K+ documents
 - **Personalized results**: MySQL-backed user history/favorites system
 - **Concurrent processing**: Jetty-embedded server handles 100+ simultaneous queries
 - **Relevance ranking**: TF-IDF + PageRank hybrid algorithm
