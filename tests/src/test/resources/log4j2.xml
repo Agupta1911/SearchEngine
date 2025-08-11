@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration>
+<Configuration status="ERROR">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%m %throwable{short.message}%n">
+			</PatternLayout>
+		</Console>
+
+		<File name="Debug" fileName="debug.log" append="false" immediateFlush="true">
+			<PatternLayout
+				pattern="[%02sequenceNumber %level{lowerCase=true}] %file:%line %thread: %m %throwable%n">
+			</PatternLayout>
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<!--  Disable jgit log output -->
+		<Logger name="org.eclipse.jgit" level="OFF"/>
+	
+		<!-- By default, logging is disabled for tests. Enable if needed for debugging purposes! -->
+		<Root level="OFF">
+			<AppenderRef ref="Console" level="OFF" />
+			<AppenderRef ref="Debug" level="OFF" />
+		</Root>
+	</Loggers>
+</Configuration>
