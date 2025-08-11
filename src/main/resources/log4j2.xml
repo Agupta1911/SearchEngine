@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE log4j:configuration>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console Appender for clean console output -->
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%-5level: %message%throwable{short.message}%n"/>
+        </Console>
+
+        <!-- File Appender for detailed debugging -->
+        <File name="FileLog" fileName="debug.log" append="false" ignoreExceptions="true"
+              immediateFlush="true" createOnDemand="true">
+            <PatternLayout pattern="[%03sequenceNumber %-5level] %thread at %logger{1}.java:%line - %message %throwable{3}%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger for Driver class -->
+        <Logger name="edu.usfca.cs272.Driver" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLog"/>
+        </Logger>
+
+        <!-- Root logger fallback -->
+        <Root level="WARN">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
