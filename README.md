@@ -5,7 +5,7 @@
 ![Jetty](https://img.shields.io/badge/Jetty-FF6600?style=for-the-badge&logo=eclipse&logoColor=white)
 ![Multi-threading](https://img.shields.io/badge/Concurrent-Processing-blue)
 
-A **multi-threaded search engine** built from scratch with web crawling, indexing, and ranking capabilities. Handles 5,000+ documents with sub-200ms response times.
+A **multi-threaded search engine** built from scratch with web crawling, indexing, and ranking capabilities. Handles 100K+ documents with sub-200ms response times.
 
 ## 🚀 Key Features
 - **Lightning-fast searches**: Average response time <200ms for 5,000+ documents
